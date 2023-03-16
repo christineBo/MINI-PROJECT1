@@ -1,0 +1,228 @@
+
+body {
+    background-color: #D9E7E2;
+}
+
+
+#in {
+  cursor: pointer;
+  transition: 100ms;
+}
+
+#in:hover {
+  transform: scale(1.5);
+}
+
+#skype {
+  cursor: pointer;
+  transition: 100ms;
+}
+
+#skype:hover {
+  transform: scale(1.5);
+}
+
+#email {
+  cursor: pointer;
+  transition: 100ms;
+}
+
+#email:hover {
+  transform: scale(1.5);
+}
+
+#fb {
+  cursor: pointer;
+  transition: 100ms;
+}
+
+#fb:hover {
+  transform: scale(1.5);
+}
+
+.btn {
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.nav-item {
+  font-family: 'Climate Crisis', sans-serif !important;
+}
+
+.btn:hover{
+  transform: scale(1.2);
+  background-color: teal !important;
+
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 5px 10px;
+
+}
+
+
+li > a::after {
+   content: "";
+   display: block;
+   margin: auto;
+   height: 3px;
+   width: 0;
+   top: 5px;
+  transition: all 0.3s;
+
+   }
+
+ li > a:hover::after, li > a.nav-link-active::after {
+    width: 100%;
+    background: teal;
+   }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+   }
+
+   
+/*HEADLINE*/   
+.headline {
+width: 100vw;
+height: 1.15em;
+font-size: 14vw;
+font-family: 'Climate Crisis',sans-serif;
+position: relative;
+}
+
+.headline div {
+position: absolute;
+left: 0;
+text-transform: uppercase;
+width: 100%;
+display: block;
+text-align:center;
+}
+
+.upper {
+top: 0;
+height: 52.5%;
+color: teal;
+overflow: hidden;
+z-index: 3;
+animation: moveUp 5s ease-in-out 1;
+animation-iteration-count: 10;
+background-color: #D9E7E2;
+animation-duration: 6s;
+
+}
+
+.lower {
+bottom: 0;
+height: 100%;
+background: linear-gradient(180deg, #D9E7E2 52.5%, teal 52.5%);
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;
+z-index: 1;
+animation: moveDown 5s ease-in-out 1; 
+animation-duration: 6s;
+animation-iteration-count: 10;
+}
+
+.inside {
+position: absolute;
+top: 40%;
+transform: translateY(-40%);
+text-align: center;
+z-index: 2;
+font-size: 3vw;
+color: gray;
+font-family: 'Playfair Display', sans-serif !important;
+}
+
+@keyframes moveUp {
+0%,
+100% {
+top: 0;
+}
+
+50%,
+70% {
+top: -45px;
+}
+}
+
+@keyframes moveDown {
+0%,
+100% {
+top: 0;
+}
+
+50%,
+70% {
+top: 30px;
+}
+}
+
+@media (max-width: 424px) {
+.container {
+font-size: 2.5rem;
+
+}
+
+.inside {
+font-size: 0.75rem;
+}
+}
+
+@media (max-width: 320px) {
+.container {
+font-size: 2rem;
+}
+
+.inside {
+font-size: 0.5rem;
+}
+}
+
+
+/*WAVES*/
+
+.waves {
+ position:relative;
+ width: 100%;
+ height:15vh;
+ margin-bottom:-7px; /*Fix for safari gap*/
+ min-height:100px;
+ max-height:150px;
+}
+
+.parallax > use {
+ animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+ }
+.parallax > use:nth-child(1) {
+ animation-delay: -2s;
+ animation-duration: 7s;
+ }
+ .parallax > use:nth-child(2) {
+ animation-delay: -3s;
+ animation-duration: 10s;
+ }
+ .parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+ }
+ .parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+ }
+ @keyframes move-forever {
+  0% {
+  transform: translate3d(-90px,0,0);
+  }
+  100% { 
+  transform: translate3d(85px,0,0);
+    }
+   }
+
